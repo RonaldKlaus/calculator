@@ -48,13 +48,16 @@ export default {
   },
   methods: {
     addInput (newInput) {
+      if (this.input == '0')
+        this.input = ''
+
       this.input = `${this.input}${newInput}`
     },
     calculateInput () {
       this.input = `${eval(this.input)}`
     },
     clearInput () {
-      this.input = ''
+      this.input = '0'
     }
   }
 }
